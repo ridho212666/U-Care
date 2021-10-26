@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="ib.ganz.u_care">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="U-Care"
+        android:name=".manager.AppManager"
+        android:usesCleartextTraffic="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.UCare">
+        <activity
+            android:theme="@style/Theme.NoActionBar"
+            android:name=".activity.PendaftaranOrtuActivity">
+        </activity>
+        <activity
+            android:theme="@style/Theme.NoActionBar"
+            android:name=".activity.PendaftaranNakesActivity" />
+        <activity
+            android:theme="@style/Theme.NoActionBar"
+            android:name=".activity.DaftarActivity" />
+        <activity
+            android:theme="@style/Theme.NoActionBar"
+            android:name=".activity.LoginActivity" />
+        <activity
+            android:theme="@style/Theme.NoActionBar"
+            android:name=".activity.SplashActivity" >
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
+
+        <activity
+            android:theme="@style/Theme.NoActionBar"
+            android:name=".activity.MainActivity">
+        </activity>
+    </application>
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+</manifest>

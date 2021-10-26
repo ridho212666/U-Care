@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">U-Care</string>
+    <string-array name="Profesi">
+        <item>Orang tua</item>
+        <item>Perawat</item>
+        <item>Dokter</item>
+        <item>Dokter Spesialis</item>
+    </string-array>
+
+    <string-array name="Kelamin">
+        <item>Laki-Laki</item>
+        <item>Perempuan</item>
+    </string-array>
+</resources>
