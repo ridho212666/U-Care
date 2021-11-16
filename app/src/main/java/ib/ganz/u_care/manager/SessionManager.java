@@ -3,24 +3,58 @@ package ib.ganz.u_care.manager;
 import android.content.Context;
 import android.content.SharedPreferences;
 
+import ib.ganz.u_care.dataclass.NakesData;
+import ib.ganz.u_care.dataclass.OrtuData;
+import ib.ganz.u_care.helper.Gzon;
+
 public class SessionManager {
 
     private static SharedPreferences sp;
     private static SharedPreferences.Editor editor;
 
     private static final String IS_LOGIN = "islogin";
+    private static final String IS_ORTU = "isortu";
     private static final String FIRE_TOKEN = "fire_base";
-    private static final String JWT_TOKEN = "jwt_token";
     private static final String ORTU_DATA = "OrtuData";
+    private static final String NAKES_DATA = "NakesData";
     private static final String RAW_PASSWORD = "rawPassword";
 
-    private static final String DUMMY_JWT = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c";
-
-    public static void init(Context c){
+    public static void init(Context c) {
         if (sp == null) {
             sp = c.getSharedPreferences("u_care", 0);
             editor = sp.edit();
         }
+    }
+
+    public static void loginOrtu(OrtuData o) {
+        editor.putString(ORTU_DATA, Gzon.toJsonObject(o)).commit();
+        editor.putBoolean(IS_LOGIN, true).commit();
+        editor.putBoolean(IS_ORTU, true).commit();
+    }
+
+    public static void loginNakes(NakesData o) {
+        editor.putString(NAKES_DATA, Gzon.toJsonObject(o)).commit();
+        editor.putBoolean(IS_LOGIN, true).commit();
+        editor.putBoolean(IS_ORTU, false).commit();
+    }
+
+    public static void logout() {
+        editor.putString(ORTU_DATA, "").commit();
+        editor.putString(NAKES_DATA, "").commit();
+        editor.putBoolean(IS_LOGIN, false).commit();
+        editor.putBoolean(IS_ORTU, false).commit();
+    }
+
+    public static OrtuData getOrtuData() {
+        return Gzon.fromJsonObject(sp.getString(ORTU_DATA, ""), OrtuData.class);
+    }
+
+    public static NakesData getNakesData() {
+        return Gzon.fromJsonObject(sp.getString(NAKES_DATA, ""), NakesData.class);
+    }
+
+    public static String getId() {
+        return isLogin() && isOrtu() ? getOrtuData().getId() : getNakesData().getId();
     }
 
     public static void setToken(String token) {
@@ -31,20 +65,16 @@ public class SessionManager {
         return sp.getString(FIRE_TOKEN, "");
     }
 
-    public static String getJwtToken() {
-        return sp.getString(JWT_TOKEN, DUMMY_JWT);
-    }
-
-    public static void setJwtToken(String s) {
-        editor.putString(JWT_TOKEN, s).commit();
-    }
-
-    public static boolean isLogin(){
+    public static boolean isLogin() {
         return sp.getBoolean(IS_LOGIN, false);
     }
 
+    public static boolean isOrtu() {
+        return sp.getBoolean(IS_ORTU, false);
+    }
+
     public static String getRawPassword() {
-        return  sp.getString(RAW_PASSWORD, "");
+        return sp.getString(RAW_PASSWORD, "");
     }
 
     public static void setRawPassword(String p) {

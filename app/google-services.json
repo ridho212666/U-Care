@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "820408090391",
+    "project_id": "u-care-ad477",
+    "storage_bucket": "u-care-ad477.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:820408090391:android:433b64a58e86e7a2e54152",
+        "android_client_info": {
+          "package_name": "ib.ganz.u_care"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "820408090391-sp54metvbjlu05tjf2ur32jqt987jogu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCMa_na_E1yYO9usW8Em14dlPNXjIOv9TM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "820408090391-sp54metvbjlu05tjf2ur32jqt987jogu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

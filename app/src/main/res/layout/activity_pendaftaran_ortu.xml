@@ -50,6 +50,7 @@
 
                     <TextView
                         android:textSize="16sp"
+                        android:textStyle="bold"
                         android:text="Form Pendaftaran"
                         android:layout_marginBottom="10dp"
                         android:layout_width="wrap_content"
@@ -68,7 +69,7 @@
                             android:layout_height="wrap_content"
                             android:hint="Nama Ibu"
                             android:inputType="textCapWords"
-                            android:textSize="12sp" />
+                            android:textSize="16sp" />
 
                     </com.google.android.material.textfield.TextInputLayout>
 
@@ -85,7 +86,7 @@
                             android:layout_height="wrap_content"
                             android:hint="No Handphone"
                             android:inputType="number"
-                            android:textSize="12sp" />
+                            android:textSize="16sp" />
 
                     </com.google.android.material.textfield.TextInputLayout>
 
@@ -102,7 +103,7 @@
                             android:layout_height="wrap_content"
                             android:hint="Nama Pengguna"
                             android:inputType="textCapWords"
-                            android:textSize="12sp" />
+                            android:textSize="16sp" />
 
                     </com.google.android.material.textfield.TextInputLayout>
 
@@ -119,7 +120,7 @@
                             android:layout_height="wrap_content"
                             android:hint="Kata Kunci"
                             android:inputType="textCapWords"
-                            android:textSize="12sp" />
+                            android:textSize="16sp" />
 
                     </com.google.android.material.textfield.TextInputLayout>
 
@@ -136,7 +137,7 @@
                             android:layout_height="wrap_content"
                             android:hint="Konfirmasi Kata Kunci"
                             android:inputType="textCapWords"
-                            android:textSize="12sp" />
+                            android:textSize="16sp" />
 
                     </com.google.android.material.textfield.TextInputLayout>
 
@@ -153,7 +154,7 @@
                             android:layout_height="wrap_content"
                             android:hint="Tanggal Lahir"
                             android:inputType="textCapWords"
-                            android:textSize="12sp" />
+                            android:textSize="16sp" />
 
                     </com.google.android.material.textfield.TextInputLayout>
 
@@ -170,12 +171,13 @@
                             android:layout_height="wrap_content"
                             android:hint="Alamat"
                             android:inputType="textCapWords"
-                            android:textSize="12sp" />
+                            android:textSize="16sp" />
 
                     </com.google.android.material.textfield.TextInputLayout>
 
                     <TextView
                         android:textSize="16sp"
+                        android:textStyle="bold"
                         android:text="Tambah Data Anak"
                         android:layout_marginTop="16dp"
                         android:layout_marginBottom="10dp"
@@ -195,7 +197,7 @@
                             android:layout_height="wrap_content"
                             android:hint="Nama Anak"
                             android:inputType="textCapWords"
-                            android:textSize="12sp" />
+                            android:textSize="16sp" />
 
                     </com.google.android.material.textfield.TextInputLayout>
 
@@ -212,7 +214,7 @@
                             android:layout_height="wrap_content"
                             android:hint="Tanggal Lahir"
                             android:inputType="textCapWords"
-                            android:textSize="12sp" />
+                            android:textSize="16sp" />
 
                     </com.google.android.material.textfield.TextInputLayout>
 
@@ -237,8 +239,8 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="Berat Badan Lahir"
-                            android:inputType="textCapWords"
-                            android:textSize="12sp" />
+                            android:inputType="numberDecimal"
+                            android:textSize="16sp" />
 
                     </com.google.android.material.textfield.TextInputLayout>
 
@@ -254,8 +256,8 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="Panjang Badan Lahir"
-                            android:inputType="textCapWords"
-                            android:textSize="12sp" />
+                            android:inputType="numberDecimal"
+                            android:textSize="16sp" />
 
                     </com.google.android.material.textfield.TextInputLayout>
 
@@ -271,8 +273,8 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="Lingkar Kepala Lahir"
-                            android:inputType="textCapWords"
-                            android:textSize="12sp" />
+                            android:inputType="numberDecimal"
+                            android:textSize="16sp" />
 
                     </com.google.android.material.textfield.TextInputLayout>
 
@@ -282,6 +284,12 @@
                         android:layout_marginTop="16dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
+
+                    <ImageView
+                        android:id="@+id/img"
+                        android:visibility="gone"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"/>
 
                     <com.google.android.material.floatingactionbutton.FloatingActionButton
                         android:id="@+id/bPicture"

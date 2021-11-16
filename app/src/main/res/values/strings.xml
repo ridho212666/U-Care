@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">U-Care</string>
+    <string name="error_gif">x or y bound size should be at least %1$dpx and file size should be no more than %2$sM</string>
     <string-array name="Profesi">
-        <item>Orang tua</item>
         <item>Perawat</item>
         <item>Dokter</item>
         <item>Dokter Spesialis</item>
