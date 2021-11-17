@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_profile"
+        android:icon="@drawable/profile"
+        android:title="Profil" />
+    <item
+        android:id="@+id/navigation_konsultasi"
+        android:icon="@drawable/konsultasi"
+        android:title="Konsultasi" />
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/home"
+        android:title="Beranda" />
+    <item
+        android:id="@+id/navigation_assesment"
+        android:icon="@drawable/assesment"
+        android:title="Assesment" />
+    <item
+        android:id="@+id/navigation_notif"
+        android:icon="@drawable/notif"
+        android:title="Pemberitahuan" />
+
+</menu>
